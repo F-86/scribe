@@ -73,3 +73,15 @@ cd /path/to/skill && pip install -r requirements.txt
 ├── scripts/                  # 可执行脚本
 └── assets/                   # 模板文件
 ```
+
+## 快速检查清单
+
+- [ ] `name` 与文件夹名一致，格式合法（`a-z` `0-9` `-`）
+- [ ] `description` ≤ 3 行 & ≤ 1024 字符，末行有关键词
+- [ ] 有系统依赖时填写 `compatibility`
+- [ ] `metadata.version` 已填写
+- [ ] L2 包含环境准备步骤（如有依赖）
+- [ ] L2 包含不适用场景
+- [ ] L2 包含 L3 加载指针（写明工具调用）
+- [ ] 所有路径引用相对于 Skill 根目录
+- [ ] L3 只放条件性内容

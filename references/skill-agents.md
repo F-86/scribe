@@ -51,8 +51,8 @@ L1 只需要这两个字段即可在所有 agent 上运行。L2/L3 的 Markdown 
 
 ## 针对不同 agent 的详细规范
 
-- **pi**：使用 `read` 加载 `references/skill-pi.md`
-- **Claude Code**：使用 `read` 加载 `references/skill-claude.md`
+- **pi**：加载 `references/skill-pi.md`
+- **Claude Code**：加载 `references/skill-claude.md`
 - 不确定或需要多 agent 兼容：只使用通用规范 `skill-spec.md`
 
 ---

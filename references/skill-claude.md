@@ -33,15 +33,24 @@ paths: "src/**/*.ts"           # 仅在操作匹配文件时激活
 ---
 ```
 
-### 常用可选字段说明
+### 完整可选字段说明
 
 | 字段 | 用途 |
 |------|------|
 | `when_to_use` | 补充 `description`，给 Claude 更多触发提示 |
-| `argument-hint` | `/` 菜单自动补全时的参数提示 |
-| `user-invocable: false` | 不让用户手动调用，只供 Claude 自动使用 |
-| `paths` | 按文件 glob 限定激活范围 |
-| `context: fork` | 在独立子 agent 中运行（不污染主会话上下文） |
+| `argument-hint` | `/` 菜单自动补全时的参数提示，如 `[issue-number]` |
+| `arguments` | 命名位置参数，供 `$name` 占位符替换 |
+| `disable-model-invocation` | 禁止 Claude 自动调用，仅手动 `/name` 触发 |
+| `user-invocable` | 设为 `false` 时从 `/` 菜单隐藏，仅 Claude 可调用 |
+| `allowed-tools` | 预批准的工具，如 `Bash(git *)` |
+| `disallowed-tools` | 禁止使用的工具，如 `AskUserQuestion` |
+| `model` | 覆盖当前会话模型 |
+| `effort` | 覆盖 effort level：`low` / `medium` / `high` / `xhigh` / `max` |
+| `context` | 设为 `fork` 时在独立子 agent 中运行 |
+| `agent` | 搭配 `context: fork`，指定子 agent 类型（如 `Explore`、`Plan`） |
+| `hooks` | Skill 生命周期 hooks |
+| `paths` | 按文件 glob 限定激活范围，如 `src/**/*.ts` |
+| `shell` | 内联命令的 shell：`bash`（默认）或 `powershell` |
 
 ## 命令调用
 
