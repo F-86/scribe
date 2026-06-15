@@ -172,18 +172,4 @@ license: MIT
 
 ## 变更记录
 
-### v0.4.0 (2026-06-16)
-- 通用化改造：去掉 `compatibility`、`metadata` 等 agent 专属字段，仅保留 `name` + `description` + `license`
-- 工具调用描述通用化，不再假设特定 agent 的工具名称
-- 修复步骤编号 Bug：第 1 步的跳转目标从"第 6 步"改为"下方 section"
-- L3 加载表格补充 `modify-doc.md`
-
-### v0.3.0 (2026-06-16)
-- 将「修改文档流程」从 L2 拆到 L3 `references/modify-doc.md`，L2 只保留加载指针
-
-### v0.2.0 (2026-06-16)
-- 新增「修改文档流程」：支持局部修改、规范化、重构、审查四种修改模式
-- 新增修改场景附加规则：先诊后治、最小改动、每改必解释、不推断意图
-
-### v0.1.0 (2026-06-15)
-- 初始版本，支持 CLAUDE.md、SKILL.md、README、CONTRIBUTING.md、CHANGELOG 五种文档类型
+详见项目根目录的 `CHANGELOG.md`。

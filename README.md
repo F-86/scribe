@@ -89,6 +89,7 @@ review 一下这个 SKILL.md，看看哪里不对
 scribe/
 ├── SKILL.md                      # Skill 主文件（L1 + L2）
 ├── README.md
+├── CHANGELOG.md                  # 版本变更记录
 ├── references/                   # 按需加载的参考指南（L3）
 │   ├── skill-spec.md             # 通用三层架构规范
 │   ├── skill-agents.md           # 各 agent 差异对照表
