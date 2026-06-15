@@ -20,7 +20,7 @@ metadata:
 
 ## 执行流程
 
-### 1. 识别文档类型
+### 1. 识别文档类型和 agent 环境
 
 根据用户的描述判断文档类型。常见类型及识别信号：
 
@@ -33,6 +33,20 @@ metadata:
 | `CHANGELOG` | "变更日志"、"更新记录"、"release notes" |
 
 若无法确定类型，向用户确认后再继续。
+
+**当文档类型是 SKILL.md 时**，额外确认目标 agent：
+
+> 这个 skill 是给哪个 agent 用的？pi、Claude Code、还是 Codex？如果是多个，我会按通用规范写。
+
+根据回答加载对应的 L3 规范：
+
+| 目标 agent | 加载文件 |
+|-----------|---------|
+| 不确定 / 多 agent | 仅 `references/skill-spec.md`（通用规范） |
+| pi | `references/skill-spec.md` + `references/skill-pi.md` |
+| Claude Code | `references/skill-spec.md` + `references/skill-claude.md` |
+
+**核心原则**：不确定 agent 时，绝不添加任何 agent 特有的字段或约定。只输出 name + description + 通用 L2 内容。
 
 ### 2. 收集上下文
 
@@ -54,7 +68,10 @@ metadata:
 | 文档类型 | L3 参考文件 |
 |---------|------------|
 | `CLAUDE.md` / agent 指令文件 | `references/claude-md.md` |
-| `SKILL.md` | `references/skill-md.md` |
+| `SKILL.md`（通用） | `references/skill-spec.md` |
+| `SKILL.md`（pi） | `references/skill-spec.md` + `references/skill-pi.md` |
+| `SKILL.md`（Claude Code） | `references/skill-spec.md` + `references/skill-claude.md` |
+| `SKILL.md`（多 agent） | `references/skill-spec.md` + `references/skill-agents.md` |
 | `README` | `references/readme.md` |
 | `CONTRIBUTING.md` | `references/contributing.md` |
 | `CHANGELOG` | `references/changelog.md` |
@@ -118,9 +135,14 @@ metadata:
 按优先级逐个处理。先完成一个（识别→收集→加载→生成→审阅），再开始下一个。不要一次生成多份文档。
 
 ### 需要参考 Skill 设计规范
-若用户要求撰写的 SKILL.md 需要严格遵循 Skill 设计规范（三层架构），使用 `read` 工具加载：
-- `references/skill-spec.md` — 完整的三层架构规范
-- `references/pi-skill-spec.md` — pi 环境补充约定
+若用户要求撰写的 SKILL.md 需要严格遵循规范，根据用户使用的 agent 加载对应文件：
+
+| 用户确认的 agent | 使用 `read` 加载 |
+|----------------|-----------------|
+| 不确定 | `references/skill-spec.md`（只使用通用规范） |
+| pi | `references/skill-spec.md` + `references/skill-pi.md` |
+| Claude Code | `references/skill-spec.md` + `references/skill-claude.md` |
+| 多 agent 兼容 | `references/skill-spec.md` + `references/skill-agents.md` |
 
 ### 项目目录需要扫描
 若用户未提供项目背景但要求写文档，先让用户描述项目，或建议用户提供关键文件路径供你阅读。不要盲目扫描大目录。

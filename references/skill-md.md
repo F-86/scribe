@@ -6,10 +6,13 @@ SKILL.md 是 AI agent 的"技能包"入口文件，定义了一个可被 agent �
 
 ## 完整规范引用
 
-编写 SKILL.md 时，**必须**参照完整的 Skill 设计规范：
+编写 SKILL.md 时，**必须**参照 Skill 设计规范。根据目标 agent 加载对应文件：
 
-- **通用规范**：`references/skill-spec.md` — 三层架构的核心定义
-- **pi 补充约定**：`references/pi-skill-spec.md` — pi 环境的额外字段和约定
+- **通用规范**（所有 agent）：`references/skill-spec.md` — 三层架构的核心定义
+- **不确定目标 agent**：先询问用户，再加载对应规范
+- **确认是 pi**：额外加载 `references/skill-pi.md` — pi 环境约定
+- **确认是 Claude Code**：额外加载 `references/skill-claude.md` — Claude Code 环境约定
+- **多 agent 兼容**：参照 `references/skill-agents.md` — 差异对照表
 
 > 加载方式：使用 `read` 工具加载上述文件。
 
