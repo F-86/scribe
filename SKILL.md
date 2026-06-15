@@ -120,6 +120,7 @@ metadata:
 ### 需要参考 Skill 设计规范
 若用户要求撰写的 SKILL.md 需要严格遵循 Skill 设计规范（三层架构），使用 `read` 工具加载：
 - `references/skill-spec.md` — 完整的三层架构规范
+- `references/pi-skill-spec.md` — pi 环境补充约定
 
 ### 项目目录需要扫描
 若用户未提供项目背景但要求写文档，先让用户描述项目，或建议用户提供关键文件路径供你阅读。不要盲目扫描大目录。

@@ -8,8 +8,8 @@ SKILL.md 是 AI agent 的"技能包"入口文件，定义了一个可被 agent �
 
 编写 SKILL.md 时，**必须**参照完整的 Skill 设计规范：
 
-- **通用规范**：当前项目目录下的 `skill-specification/skill-spec.md` —— 三层架构的核心定义
-- **pi 补充约定**：`skill-specification/pi-skill-spec.md` —— pi 环境的额外字段和约定
+- **通用规范**：`references/skill-spec.md` — 三层架构的核心定义
+- **pi 补充约定**：`references/pi-skill-spec.md` — pi 环境的额外字段和约定
 
 > 加载方式：使用 `read` 工具加载上述文件。
 
@@ -130,4 +130,4 @@ description: >-
 
 ## 完整示例
 
-参见 `skill-specification/examples/universal-meeting-summary/SKILL.md` 和 `skill-specification/examples/pi-data-lookup/SKILL.md`。
+参见本 skill 的 `SKILL.md`（L1+L2 完整示例）及 `references/skill-spec.md`（完整规范）。
