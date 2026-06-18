@@ -38,6 +38,7 @@ license: MIT
 | `README` | "项目说明"、"readme"、"介绍文档" |
 | `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" |
 | `CHANGELOG` | "变更日志"、"更新记录"、"release notes" |
+| API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" |
 
 若无法确定类型，向用户确认后再继续。
 
@@ -80,6 +81,7 @@ license: MIT
 | `README` | `references/readme.md` |
 | `CONTRIBUTING.md` | `references/contributing.md` |
 | `CHANGELOG` | `references/changelog.md` |
+| API 文档（REST / SDK / OpenAPI） | `references/api-doc.md` |
 | **修改现有文档** | `references/modify-doc.md` |
 | 其他未覆盖的文档类型 | `references/general-principles.md` |
 
@@ -145,7 +147,7 @@ license: MIT
 ## 不适用场景
 
 - 代码实现 / 写业务逻辑 → 直接写代码，不需要此 Skill
-- API 文档（从代码注释自动生成） → 使用 TypeDoc / Sphinx / JSDoc 等工具
+- 从代码注释**全量自动生成** API 文档 → 使用 TypeDoc / Sphinx / JSDoc 等工具（手写 REST 接口文档 / SDK 参考 / OpenAPI 规范由本 Skill 覆盖，见 `references/api-doc.md`）
 - 长篇技术博客或教程 → 此 Skill 面向项目文档，非内容创作
 - 设计文档 / RFC（架构决策记录） → 使用其他工具或自行撰写，此处不覆盖
 

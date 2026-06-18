@@ -64,6 +64,7 @@ scribe 会在文档相关任务中自动触发，也可手动调用：
 帮我建一个 PDF 处理的 skill
 创建贡献指南
 整理最近的变更日志
+给这套 REST 接口写 API 文档
 ```
 
 **修改 / 规范文档**：
@@ -82,6 +83,7 @@ review 一下这个 SKILL.md，看看哪里不对
 | `README` | 项目首页介绍 |
 | `CONTRIBUTING.md` | 贡献者指南 |
 | `CHANGELOG` | 版本变更记录（Keep a Changelog 格式） |
+| API 文档 | REST 接口 / 库 SDK 参考 / OpenAPI 规范 |
 
 ## 项目结构
 
@@ -100,6 +102,7 @@ scribe/
 │   ├── readme.md                 # README 编写指南
 │   ├── contributing.md           # CONTRIBUTING.md 编写指南
 │   ├── changelog.md              # CHANGELOG 编写指南
+│   ├── api-doc.md                # API 文档编写指南（REST / SDK / OpenAPI）
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
 │   └── general-principles.md     # 通用写作原则
 ├── examples/

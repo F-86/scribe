@@ -3,6 +3,17 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
 版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [0.5.0] - 2026-06-18
+
+### Added
+- 新增 **API 文档**撰写能力，覆盖三类：REST/HTTP 接口文档、库/SDK API 参考、OpenAPI/Swagger 规范
+- 新建 L3 参考指南 `references/api-doc.md`（含三类各自的结构模板、DO/DON'T、章节取舍、示例）
+- `trigger-examples.md` 新增「写 API 文档」触发示例
+
+### Changed
+- 「不适用场景」调整 API 文档边界：手写接口文档/SDK 参考/OpenAPI 由本 skill 覆盖，仅「从注释全量自动生成」交给 TypeDoc/Sphinx/JSDoc
+- SKILL.md 文档类型表、L3 加载表，`modify-doc.md` 类型识别表，README 支持类型表/项目结构同步接入 API 文档
+
 ## [0.4.0] - 2026-06-16
 
 ### Changed

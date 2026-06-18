@@ -28,6 +28,7 @@
 | `README` | 文件名通常是 `README.md` |
 | `CONTRIBUTING.md` | 文件名通常是 `CONTRIBUTING.md` |
 | `CHANGELOG` | 文件名通常是 `CHANGELOG.md` |
+| API 文档 | 文件名通常是 `API.md`、`openapi.yaml`/`.json`、`swagger.*`，或 `docs/` 下的接口文档 |
 
 若无法确定类型，向用户确认。
 
