@@ -38,9 +38,10 @@ license: MIT
 | `README` | "项目说明"、"readme"、"介绍文档" |
 | `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" |
 | `CHANGELOG` | "变更日志"、"更新记录"、"release notes" |
+| `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" |
 | API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" |
 
-若无法确定类型，向用户确认后再继续。
+若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
 **当文档类型是 SKILL.md 时**，额外确认目标 agent：
 
@@ -81,8 +82,10 @@ license: MIT
 | `README` | `references/readme.md` |
 | `CONTRIBUTING.md` | `references/contributing.md` |
 | `CHANGELOG` | `references/changelog.md` |
+| `PROGRESS.md` / `ROADMAP.md` / `TODO.md` | `references/progress.md` |
 | API 文档（REST / SDK / OpenAPI） | `references/api-doc.md` |
 | **修改现有文档** | `references/modify-doc.md` |
+| **文档选型 / 职责边界不清** | `references/doc-map.md` |
 | 其他未覆盖的文档类型 | `references/general-principles.md` |
 
 ### 5. 生成文档

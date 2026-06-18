@@ -3,6 +3,19 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
 版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [0.6.0] - 2026-06-18
+
+### Added
+- 新增 **项目进度文档(PROGRESS.md)** 撰写能力:新建 L3 指南 `references/progress.md`(时序阶段制模板、状态标记约定、DO/DON'T、章节取舍、与 CHANGELOG 的边界)
+- 新增 **文档职责总览** `references/doc-map.md`:横切所有文档类型的总纲,讲清每类文档管什么、易混边界(PROGRESS vs CHANGELOG、README vs 设计文档等)、选型决策与成熟度分阶段
+- 新增项目自身的 `PROGRESS.md`,分阶段记录已完成能力与后续规划
+- `trigger-examples.md` 新增「写项目进度文档」触发示例
+
+### Changed
+- SKILL.md 文档类型识别表、L3 加载表接入 PROGRESS.md 与 doc-map.md;类型不清/边界模糊时引导加载 doc-map.md
+- `modify-doc.md` 类型识别表新增 PROGRESS.md / ROADMAP.md / TODO.md
+- README 支持类型表、项目结构树同步接入 doc-map.md 与 progress.md,并链接文档职责总览
+
 ## [0.5.0] - 2026-06-18
 
 ### Added

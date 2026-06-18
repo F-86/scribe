@@ -83,7 +83,10 @@ review 一下这个 SKILL.md，看看哪里不对
 | `README` | 项目首页介绍 |
 | `CONTRIBUTING.md` | 贡献者指南 |
 | `CHANGELOG` | 版本变更记录（Keep a Changelog 格式） |
+| `PROGRESS.md` | 项目进度文档（分阶段待办，记录要做什么/做到哪了） |
 | API 文档 | REST 接口 / 库 SDK 参考 / OpenAPI 规范 |
+
+> 各类文档分别管什么、边界在哪，见 [文档职责总览](references/doc-map.md)。
 
 ## 项目结构
 
@@ -93,6 +96,7 @@ scribe/
 ├── README.md
 ├── CHANGELOG.md                  # 版本变更记录
 ├── references/                   # 按需加载的参考指南（L3）
+│   ├── doc-map.md                # 文档职责总览（该写哪类、边界在哪）
 │   ├── skill-spec.md             # 通用三层架构规范
 │   ├── skill-agents.md           # 各 agent 差异对照表
 │   ├── skill-pi.md               # pi 专属约定
@@ -102,6 +106,7 @@ scribe/
 │   ├── readme.md                 # README 编写指南
 │   ├── contributing.md           # CONTRIBUTING.md 编写指南
 │   ├── changelog.md              # CHANGELOG 编写指南
+│   ├── progress.md               # 项目进度文档（PROGRESS.md）编写指南
 │   ├── api-doc.md                # API 文档编写指南（REST / SDK / OpenAPI）
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
 │   └── general-principles.md     # 通用写作原则
