@@ -5,6 +5,18 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-06-18
+
+### Added
+- 新增 **测试文档**撰写能力(`references/test-doc.md`):一份指南统管三种形态——测试用例规格(逐条用例:前置→步骤→预期)、测试策略/计划(分层、覆盖率目标、范围、CI)、测试编写指南(放哪、命名、断言/mock、跑测试),仿 `faq.md` 的多形态结构;并接入完整同步清单(SKILL.md 识别表、modify-doc.md 识别表、doc-map 总表/选型/边界、README 类型表+结构树、AGENTS.md、trigger-examples、L1 description 关键词)
+- doc-map 补两条边界澄清:测试文档 vs CONTRIBUTING(怎么测 vs 贡献全流程)、测试策略 vs 设计文档(质量保障规划 vs 架构原理)
+
+### Changed
+- 测试文档取向定为**默认独立成文**(`TEST_PLAN.md`/`TESTING.md`/`test-cases/`):有对应读者就给独立文件,职责清晰、好找好维护;仅当项目极小、内容寥寥几条时才并入 CONTRIBUTING 的「测试」一节,不为"省文件"强行合并。`test-doc.md`(定位段+章节取舍)与 `doc-map.md` 边界行同步该取向
+
+### Fixed
+- 修复 `doc-map.md` 中测试相关两条边界行(测试文档 vs CONTRIBUTING、测试策略 vs 设计文档)各重复一遍的问题——接入时的意外,已去重
+
 ## [0.8.0] - 2026-06-18
 
 ### Added

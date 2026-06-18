@@ -37,6 +37,7 @@
 | FAQ / 故障排查 | 文件名通常是 `FAQ.md`、`TROUBLESHOOTING.md` |
 | 治理小文档 | 文件名通常在 `.github/`（Issue/PR 模板）或 `CODE_OF_CONDUCT.md` |
 | 提交信息规范 | 文件名通常是 `COMMIT_CONVENTION.md`，或 CONTRIBUTING.md 的「提交规范」节 |
+| 测试文档 | 文件名通常是 `TESTING.md`、`TEST_PLAN.md`、`test-cases.md`，或 `tests/` 下的用例/策略文档 |
 
 若无法确定类型，向用户确认。
 

@@ -98,6 +98,7 @@ review 一下这个 SKILL.md，看看哪里不对
 | `SECURITY.md` | 安全漏洞上报策略 |
 | 部署 / 运维文档 | 环境、配置项、上线步骤、回滚、排障 |
 | FAQ / 故障排查 | 常见问题问答、报错排查指南 |
+| 测试文档 | 测试用例规格 / 测试策略计划 / 测试编写指南 |
 | 治理小文档 | Issue/PR 模板、CODE_OF_CONDUCT |
 | 提交信息规范 | Commit Message 格式（Conventional Commits） |
 
@@ -127,6 +128,7 @@ scribe/
 │   ├── security.md               # SECURITY.md 编写指南
 │   ├── deployment.md             # 部署 / 运维文档编写指南
 │   ├── faq.md                    # FAQ / 故障排查编写指南
+│   ├── test-doc.md               # 测试文档编写指南（用例规格 / 策略计划 / 编写指南）
 │   ├── governance.md             # 治理小文档（Issue/PR 模板、行为准则）编写指南
 │   ├── commit-message.md         # 提交信息规范（Conventional Commits）编写指南
 │   ├── modify-doc.md             # 修改/规范/重构文档指南

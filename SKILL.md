@@ -2,7 +2,7 @@
 name: scribe
 description: >-
   AI agent 文档编写专家：撰写、修改、规范、重构各类开发者文档，也可为项目一次性初始化整套文档或检查补齐缺失文档。
-  关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、ADR、提交规范
+  关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、ADR、提交规范、测试文档、测试用例
 license: MIT
 ---
 
@@ -53,6 +53,8 @@ license: MIT
 | FAQ / 故障排查 | "faq"、"常见问题"、"故障排查"、"troubleshooting"、"排错指南" | `faq.md` |
 | 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" | `governance.md` |
 | 提交信息规范 | "提交规范"、"commit message"、"commit 规范"、"conventional commits"、"提交信息格式" | `commit-message.md` |
+| 测试文档 | "测试用例"、"测试文档"、"测试计划"、"测试策略"、"test case"、"怎么写测试"、"测试规范" | `test-doc.md` |
+| 测试文档 | "测试用例"、"测试文档"、"测试计划"、"测试策略"、"test case"、"怎么写测试"、"测试规范" | `test-doc.md` |
 
 若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
