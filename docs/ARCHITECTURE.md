@@ -50,8 +50,8 @@ flowchart TD
 **新建一份文档**(以"写 README"为例):
 1. L1 description 命中文档相关意图 → 加载 L2
 2. L2 判断为"新建"模式
-3. L2 用识别表把"readme/项目说明"匹配到 `README` 类型
-4. L2 用加载表加载 `references/readme.md`
+3. L2 用第 2 步识别表把"readme/项目说明"匹配到 `README` 类型,并据同表的「L3 文件」列
+4. 加载 `references/readme.md`
 5. 依规范收集上下文、生成、审阅迭代
 
 **修改/规范现有文档**:L2 判定为修改模式 → 加载 `references/modify-doc.md` → 先识别类型与 agent 环境 → 加载对应 L3 → 诊断→确认→执行。
@@ -59,5 +59,6 @@ flowchart TD
 ## 权衡与已知限制
 
 - **规范靠人维护,可能与社区标准漂移**:L3 是手写规范,外部最佳实践演进时需手动跟进。
-- **新增一类文档需同步 5 处**(SKILL.md×2、modify-doc.md、README、trigger-examples),易遗漏——靠 CONTRIBUTING 的"5 处同步"清单约束。
+- **新增一类文档需同步多处**(SKILL.md 识别表、modify-doc.md、README、trigger-examples,必要时 doc-map 边界),易遗漏——靠 CONTRIBUTING 的「同步清单」约束。
 - **L1 description 的触发词决定召回率**:词不全会导致该触发时没触发,是当前最脆弱的一环。
+- **第 2 步的类型索引表随文档类型数量线性增长**:它是 L2 中唯一会随能力增多而变长的部分。目前是「索引/查找表」性质(扫一眼即跳转),非展开的流程,尚在可接受范围。**阈值线:当文档类型超过约 20 种、或该表超过约 25 行时,应将其降级为独立的 L3 索引文件(如 `references/doc-types-index.md`),L2 只保留"识别不出则加载索引"的指针。** 在此之前不动它,避免给每次必做的"类型识别"多加一跳。
