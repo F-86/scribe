@@ -13,8 +13,7 @@ Closes #
 
 ## 自检清单
 > 若新增/调整了文档类型,务必完成「5 处同步」(见 CONTRIBUTING.md)
-- [ ] SKILL.md 文档类型识别表已更新
-- [ ] SKILL.md L3 加载表已更新
+- [ ] SKILL.md 第 2 步识别表已更新（信号 + L3 文件两列）
 - [ ] references/modify-doc.md 类型识别表已更新
 - [ ] README 支持类型表 + 项目结构树已更新
 - [ ] examples/trigger-examples.md 触发示例已更新

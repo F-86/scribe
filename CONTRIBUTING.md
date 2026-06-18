@@ -53,12 +53,11 @@ README.md / CHANGELOG.md / PROGRESS.md / SECURITY.md — 项目自身的对外�
 这是最容易出错的贡献——新增一个文档类型必须同步改动多处，缺一处都会导致流程断裂：
 
 1. 新建 `references/<type>.md`（L3 指南本体，套用 `references/readme.md` 的结构）
-2. `SKILL.md` 第 2 步「文档类型识别表」加一行
-3. `SKILL.md` 第 4 步「L3 加载表」加一行
-4. `references/modify-doc.md` 步骤 A 的类型识别表加一行
-5. `README.md` 支持类型表 + 项目结构树各加一行
-6. `examples/trigger-examples.md` 加触发示例
-7. `references/doc-map.md` 补该类型与相邻文档的边界（若有易混淆的邻居）
+2. `SKILL.md` 第 2 步「文档类型识别表」加一行（该表含信号 + L3 文件两列，一处搞定识别与加载）
+3. `references/modify-doc.md` 步骤 A 的类型识别表加一行
+4. `README.md` 支持类型表 + 项目结构树各加一行
+5. `examples/trigger-examples.md` 加触发示例
+6. `references/doc-map.md` 补该类型与相邻文档的边界（若有易混淆的邻居）
 
 ## 提交前验证
 

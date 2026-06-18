@@ -4,7 +4,7 @@ AI agent 文档编写专家 Skill：撰写、修改、规范、重构各类开�
 
 ## 改动约定
 
-- **新增文档类型 = 多处同步**：新建 `references/<type>.md` 后，必须同步 `SKILL.md`（识别表 + L3 加载表）、`references/modify-doc.md`（类型识别表）、`README.md`（类型表 + 结构树）、`examples/trigger-examples.md`（触发示例），并视情况在 `references/doc-map.md` 补该类型与相邻文档的边界。缺一处就会流程断裂——完整清单与勾选项见 [CONTRIBUTING.md](CONTRIBUTING.md#新增一种文档类型同步清单)。
+- **新增文档类型 = 多处同步**：新建 `references/<type>.md` 后，必须同步 `SKILL.md` 第 2 步识别表（含信号 + L3 文件两列）、`references/modify-doc.md`（类型识别表）、`README.md`（类型表 + 结构树）、`examples/trigger-examples.md`（触发示例），并视情况在 `references/doc-map.md` 补该类型与相邻文档的边界。缺一处就会流程断裂——完整清单与勾选项见 [CONTRIBUTING.md](CONTRIBUTING.md#新增一种文档类型同步清单)。
 - **L3 指南统一结构**：定位 → 结构模板 → 编写原则（DO/DON'T）→ 章节取舍 → 示例。新建时套用 `references/readme.md` 的风格。
 - **每次功能改动都记 CHANGELOG**：`CHANGELOG.md` 遵循 Keep a Changelog + SemVer，新增一个版本段。
 - **提交信息**：Conventional Commits，中文描述（如 `feat: 新增 API 文档撰写能力 (v0.5.0)`）。

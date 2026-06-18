@@ -33,28 +33,28 @@ license: MIT
 
 ### 2. 识别文档类型和 agent 环境
 
-根据用户的描述判断文档类型。常见类型及识别信号：
+根据用户的描述判断文档类型。下表同时给出**识别信号**与**对应的 L3 参考文件**（第 4 步据此加载，所有文件在本 skill 的 `references/` 目录下）：
 
-| 文档类型 | 典型信号 |
-|---------|---------|
-| `CLAUDE.md` / `AGENTS.md` | "claude 规则"、"项目指令"、"agent 上下文"、"agents.md"、"codex 规则"、"agent 指令文件" |
-| `SKILL.md` | "skill"、"技能文件"、"agent skill"、"slash command" |
-| `README` | "项目说明"、"readme"、"介绍文档" |
-| `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" |
-| `CHANGELOG` | "变更日志"、"更新记录"、"release notes" |
-| `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" |
-| API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" |
-| 设计/架构文档 | "设计文档"、"架构文档"、"系统设计"、"技术方案"、"RFC"、"提案" |
-| ADR | "架构决策记录"、"adr"、"决策记录"、"技术选型记录" |
-| `SECURITY.md` | "安全策略"、"漏洞上报"、"security.md"、"安全披露" |
-| 部署/运维文档 | "部署文档"、"运维文档"、"上线步骤"、"配置说明"、"deployment" |
-| FAQ / 故障排查 | "faq"、"常见问题"、"故障排查"、"troubleshooting"、"排错指南" |
-| 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" |
-| 提交信息规范 | "提交规范"、"commit message"、"commit 规范"、"conventional commits"、"提交信息格式" |
+| 文档类型 | 典型信号 | L3 参考文件 |
+|---------|---------|------------|
+| `CLAUDE.md` / `AGENTS.md` | "claude 规则"、"项目指令"、"agent 上下文"、"agents.md"、"codex 规则"、"agent 指令文件" | `agent-instructions.md` |
+| `SKILL.md` | "skill"、"技能文件"、"agent skill"、"slash command" | `skill-spec.md`（agent 变体见下方 agent 表追加） |
+| `README` | "项目说明"、"readme"、"介绍文档" | `readme.md` |
+| `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" | `contributing.md` |
+| `CHANGELOG` | "变更日志"、"更新记录"、"release notes" | `changelog.md` |
+| `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" | `progress.md` |
+| API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" | `api-doc.md` |
+| 设计/架构文档 | "设计文档"、"架构文档"、"系统设计"、"技术方案"、"RFC"、"提案" | `design-doc.md` |
+| ADR | "架构决策记录"、"adr"、"决策记录"、"技术选型记录" | `adr.md` |
+| `SECURITY.md` | "安全策略"、"漏洞上报"、"security.md"、"安全披露" | `security.md` |
+| 部署/运维文档 | "部署文档"、"运维文档"、"上线步骤"、"配置说明"、"deployment" | `deployment.md` |
+| FAQ / 故障排查 | "faq"、"常见问题"、"故障排查"、"troubleshooting"、"排错指南" | `faq.md` |
+| 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" | `governance.md` |
+| 提交信息规范 | "提交规范"、"commit message"、"commit 规范"、"conventional commits"、"提交信息格式" | `commit-message.md` |
 
 若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
-**当文档类型是 SKILL.md 时**，额外确认目标 agent：
+**当文档类型是 SKILL.md 时**，额外确认目标 agent，按下表追加文件：
 
 > 这个 skill 是给哪个 agent 用的？pi、Claude Code、还是 Codex？如果是多个，我会按通用规范写。
 
@@ -81,27 +81,10 @@ license: MIT
 
 ### 4. 加载 L3 参考资料
 
-根据文档类型，加载对应的 L3 参考指南（所有文件相对于本 skill 的 `references/` 目录）：
+根据第 2 步识别表的「L3 参考文件」列，用 `read` 工具加载对应文件。此外这几种**非文档类型**的场景按需加载：
 
-| 文档类型 | L3 参考文件 |
-|---------|------------|
-| `CLAUDE.md` / `AGENTS.md` / agent 指令文件 | `references/agent-instructions.md` |
-| `SKILL.md`（通用） | `references/skill-spec.md` |
-| `SKILL.md`（pi） | `references/skill-spec.md` + `references/skill-pi.md` |
-| `SKILL.md`（Claude Code） | `references/skill-spec.md` + `references/skill-claude.md` |
-| `SKILL.md`（多 agent） | `references/skill-spec.md` + `references/skill-agents.md` |
-| `README` | `references/readme.md` |
-| `CONTRIBUTING.md` | `references/contributing.md` |
-| `CHANGELOG` | `references/changelog.md` |
-| `PROGRESS.md` / `ROADMAP.md` / `TODO.md` | `references/progress.md` |
-| API 文档（REST / SDK / OpenAPI） | `references/api-doc.md` |
-| 设计 / 架构文档 / RFC | `references/design-doc.md` |
-| ADR（架构决策记录） | `references/adr.md` |
-| `SECURITY.md` | `references/security.md` |
-| 部署 / 运维文档 | `references/deployment.md` |
-| FAQ / 故障排查 | `references/faq.md` |
-| 治理小文档（Issue/PR 模板、CODE_OF_CONDUCT） | `references/governance.md` |
-| 提交信息规范（Commit Message / Conventional Commits） | `references/commit-message.md` |
+| 场景 | L3 参考文件 |
+|------|------------|
 | **修改现有文档** | `references/modify-doc.md` |
 | **项目级编排（初始化 / 补齐多文档）** | `references/project-setup.md` |
 | **文档选型 / 职责边界不清** | `references/doc-map.md` |
