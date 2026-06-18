@@ -116,7 +116,6 @@ scribe/
 │   ├── skill-agents.md           # 各 agent 差异对照表
 │   ├── skill-pi.md               # pi 专属约定
 │   ├── skill-claude.md           # Claude Code 专属约定
-│   ├── skill-md.md               # SKILL.md 编写指南
 │   ├── agent-instructions.md     # CLAUDE.md / AGENTS.md 编写指南
 │   ├── readme.md                 # README 编写指南
 │   ├── contributing.md           # CONTRIBUTING.md 编写指南
