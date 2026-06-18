@@ -23,7 +23,7 @@
 
 | 文档类型 | 识别方式 |
 |---------|---------|
-| `CLAUDE.md` | 文件名通常是 `CLAUDE.md`、`rules.md` 或 `.claude/`、`.codex/` 下的指令文件 |
+| `CLAUDE.md` / `AGENTS.md` | 文件名通常是 `CLAUDE.md`、`AGENTS.md`、`rules.md` 或 `.claude/`、`.codex/` 下的指令文件 |
 | `SKILL.md` | 文件名通常是 `SKILL.md`，位于 skill 目录下 |
 | `README` | 文件名通常是 `README.md` |
 | `CONTRIBUTING.md` | 文件名通常是 `CONTRIBUTING.md` |

@@ -33,7 +33,7 @@ license: MIT
 
 | 文档类型 | 典型信号 |
 |---------|---------|
-| `CLAUDE.md` | "claude 规则"、"项目指令"、"agent 上下文"、"codex 规则"、"agent 指令文件" |
+| `CLAUDE.md` / `AGENTS.md` | "claude 规则"、"项目指令"、"agent 上下文"、"agents.md"、"codex 规则"、"agent 指令文件" |
 | `SKILL.md` | "skill"、"技能文件"、"agent skill"、"slash command" |
 | `README` | "项目说明"、"readme"、"介绍文档" |
 | `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" |
@@ -73,7 +73,7 @@ license: MIT
 
 | 文档类型 | L3 参考文件 |
 |---------|------------|
-| `CLAUDE.md` / agent 指令文件 | `references/claude-md.md` |
+| `CLAUDE.md` / `AGENTS.md` / agent 指令文件 | `references/agent-instructions.md` |
 | `SKILL.md`（通用） | `references/skill-spec.md` |
 | `SKILL.md`（pi） | `references/skill-spec.md` + `references/skill-pi.md` |
 | `SKILL.md`（Claude Code） | `references/skill-spec.md` + `references/skill-claude.md` |

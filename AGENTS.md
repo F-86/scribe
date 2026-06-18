@@ -1,6 +1,6 @@
 # scribe
 
-AI agent 文档编写专家 Skill：撰写、修改、规范、重构 CLAUDE.md / SKILL.md / README / CONTRIBUTING / CHANGELOG / API 文档。纯 Markdown 项目，无代码、无构建、无依赖。
+AI agent 文档编写专家 Skill：撰写、修改、规范、重构 CLAUDE.md / AGENTS.md / SKILL.md / README / CONTRIBUTING / CHANGELOG / API 文档。纯 Markdown 项目，无代码、无构建、无依赖。
 
 ## 改动约定
 

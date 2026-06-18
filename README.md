@@ -78,7 +78,7 @@ review 一下这个 SKILL.md，看看哪里不对
 
 | 文档 | 说明 |
 |------|------|
-| `CLAUDE.md` | AI agent 项目上下文/指令文件 |
+| `CLAUDE.md` / `AGENTS.md` | AI agent 项目上下文/指令文件（含 AGENTS.md 开放标准） |
 | `SKILL.md` | Agent skill 技能包入口 |
 | `README` | 项目首页介绍 |
 | `CONTRIBUTING.md` | 贡献者指南 |
@@ -98,7 +98,7 @@ scribe/
 │   ├── skill-pi.md               # pi 专属约定
 │   ├── skill-claude.md           # Claude Code 专属约定
 │   ├── skill-md.md               # SKILL.md 编写指南
-│   ├── claude-md.md              # CLAUDE.md 编写指南
+│   ├── agent-instructions.md     # CLAUDE.md / AGENTS.md 编写指南
 │   ├── readme.md                 # README 编写指南
 │   ├── contributing.md           # CONTRIBUTING.md 编写指南
 │   ├── changelog.md              # CHANGELOG 编写指南

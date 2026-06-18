@@ -9,11 +9,12 @@
 - 新增 **API 文档**撰写能力，覆盖三类：REST/HTTP 接口文档、库/SDK API 参考、OpenAPI/Swagger 规范
 - 新建 L3 参考指南 `references/api-doc.md`（含三类各自的结构模板、DO/DON'T、章节取舍、示例）
 - `trigger-examples.md` 新增「写 API 文档」触发示例
+- 支持 **AGENTS.md** 开放标准（agents.md）：指令文件指南泛化为「agent 指令文件」通用指南，覆盖 CLAUDE.md 与 AGENTS.md，补充两者选择建议与 monorepo 嵌套就近原则；L3 文件由 `claude-md.md` 重命名为 `references/agent-instructions.md`
 
 ### Changed
 - 「不适用场景」调整 API 文档边界：手写接口文档/SDK 参考/OpenAPI 由本 skill 覆盖，仅「从注释全量自动生成」交给 TypeDoc/Sphinx/JSDoc
 - SKILL.md 文档类型表、L3 加载表，`modify-doc.md` 类型识别表，README 支持类型表/项目结构同步接入 API 文档
-- `claude-md.md`：目录结构从「建议放」降级为「默认不放」（agent 会自己扫目录，目录说明属于 README 职责），同步删除结构模板与示例中的目录段落
+- `agent-instructions.md`：目录结构从「建议放」降级为「默认不放」（agent 会自己扫目录，目录说明属于 README 职责），同步删除结构模板与示例中的目录段落
 
 ## [0.4.0] - 2026-06-16
 

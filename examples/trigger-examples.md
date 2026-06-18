@@ -9,6 +9,8 @@
 用户：帮我写个 CLAUDE.md，这是个 React + Express 的全栈项目
 用户：为这个项目创建一个 rules 文件给 AI agent 用
 用户：给项目写 claude 的指令文件
+用户：写个 AGENTS.md，要跨工具通用
+用户：给这个 monorepo 加一份 agents.md
 ```
 
 ### 写 SKILL.md
