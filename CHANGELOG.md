@@ -12,6 +12,7 @@
 - 为 scribe 自身新增 `docs/COMMIT_CONVENTION.md`,CONTRIBUTING「提交规范」节改为指向它(单一信息源),README「文档」节加入口
 
 ### Changed
+- 更新 L1 description(触发判断的唯一依据):补全项目初始化/补齐、API/设计文档/ADR/项目进度/提交规范等能力关键词——此前 description 停留在早期版本,新增能力无匹配词可能导致 skill 不触发(召回率问题)
 - 合并 SKILL.md 第 2 步「类型识别表」与第 4 步「L3 加载表」为一张三列表(类型 | 信号 | L3 文件):两表原以同一文档类型为主键并列维护,合并后新增文档类型由"改两处"降为"改一处";同步精简 CONTRIBUTING 同步清单(7→6 步)、AGENTS.md 与 PR 模板描述
 - 精简 SKILL.md(209→199 行):删除「特殊情况 / 需要参考 Skill 设计规范」中与第 2 步重复的 agent 加载表,将其独有的「多 agent→skill-agents.md」信息合并进第 2 步,消除 L2 内的三表冗余
 - 删除孤儿文件 `references/skill-md.md`:零路由引用,内容已被 `skill-spec.md` 完整覆盖,且其 frontmatter 示例含 `compatibility`/`metadata` 等已废弃字段(违反 ADR-0002);同步移除 README 结构树引用

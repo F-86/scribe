@@ -1,8 +1,8 @@
 ---
 name: scribe
 description: >-
-  AI agent 文档编写专家：撰写、修改、规范、重构 CLAUDE.md、SKILL.md、README、CONTRIBUTING.md、CHANGELOG 等开发者文档。
-  关键词：写文档、改文档、规范文档、重构文档、CLAUDE.md、SKILL.md、README、贡献指南、变更日志、指令文件
+  AI agent 文档编写专家：撰写、修改、规范、重构各类开发者文档，也可为项目一次性初始化整套文档或检查补齐缺失文档。
+  关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、ADR、提交规范
 license: MIT
 ---
 
