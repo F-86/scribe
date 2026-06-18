@@ -4,6 +4,8 @@
 
 README 是项目的第一印象，回答三个问题：这是什么？怎么用？怎么参与？
 
+> 与相邻文档的边界见 [`doc-map.md`](doc-map.md)：README 讲"怎么用"，**为什么这么设计**归设计文档，**改了什么**归 CHANGELOG，架构细节不要塞进 README。
+
 ## 结构模板
 
 ```markdown

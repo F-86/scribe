@@ -4,6 +4,8 @@
 
 CHANGELOG 是按时间倒序记录项目每个版本变更的文档。目标读者是升级用户：他们会对照着看「从我的版本到现在，改了什么？有什么 Breaking Change？」
 
+> 与相邻文档的边界见 [`doc-map.md`](doc-map.md)：CHANGELOG 朝后看(**已发布**版本的变更),还没做的计划归 PROGRESS;它是面向用户的**聚合摘要**,而提交信息是逐条原始记录(归提交规范),两者不可互相替代。
+
 ## 格式：Keep a Changelog
 
 遵循 [Keep a Changelog](https://keepachangelog.com/) 规范：
