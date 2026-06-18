@@ -17,14 +17,6 @@ CLAUDE.md 是放在项目根目录下、供 AI agent（Claude Code、Codex、pi 
 - 数据库：...
 - 关键依赖：...
 
-## 目录结构
-<!-- 只需列出关键目录，标注用途 -->
-```
-src/         — 源代码
-tests/       — 测试
-docs/        — 文档
-```
-
 ## 常用命令
 ```bash
 npm run dev        # 启动开发服务器
@@ -78,7 +70,7 @@ npm run build      # 构建
 
 - **项目概述** — 必须。2-3 句，agent 需要知道在什么项目里
 - **技术栈** — 必须。agent 需要知道用什么语言/框架
-- **目录结构** — 建议。只列关键目录（src/tests/docs/config），不列完整树
+- **目录结构** — 默认不放。agent 会自己扫目录，目录说明属于 README 的职责；仅当目录命名不直观、或有 agent 必须知道的非常规布局时才简要点出
 - **常用命令** — 必须。agent 最常做的事就是运行命令
 - **编码约定** — 建议。选 5-10 条最重要的约定
 - **测试说明** — 如有复杂测试流程，单列一节
@@ -97,15 +89,6 @@ Express + SQLite 待办事项 API，支持用户认证。
 - Node.js 20+, Express 4, SQLite (better-sqlite3)
 - 测试：vitest
 - 认证：JWT + bcrypt
-
-## 目录
-```
-src/
-  routes/      — 路由处理
-  middleware/   — 认证、验证
-  db/          — 数据库初始化 & 迁移
-tests/         — 测试，与 src 结构对应
-```
 
 ## 常用命令
 ```bash
