@@ -85,6 +85,12 @@ review 一下这个 SKILL.md，看看哪里不对
 | `CHANGELOG` | 版本变更记录（Keep a Changelog 格式） |
 | `PROGRESS.md` | 项目进度文档（分阶段待办，记录要做什么/做到哪了） |
 | API 文档 | REST 接口 / 库 SDK 参考 / OpenAPI 规范 |
+| 设计 / 架构文档 | 系统架构现状、技术方案 / RFC |
+| ADR | 架构决策记录（单个技术决策的始末） |
+| `SECURITY.md` | 安全漏洞上报策略 |
+| 部署 / 运维文档 | 环境、配置项、上线步骤、回滚、排障 |
+| FAQ / 故障排查 | 常见问题问答、报错排查指南 |
+| 治理小文档 | Issue/PR 模板、CODE_OF_CONDUCT |
 
 > 各类文档分别管什么、边界在哪，见 [文档职责总览](references/doc-map.md)。
 
@@ -108,12 +114,34 @@ scribe/
 │   ├── changelog.md              # CHANGELOG 编写指南
 │   ├── progress.md               # 项目进度文档（PROGRESS.md）编写指南
 │   ├── api-doc.md                # API 文档编写指南（REST / SDK / OpenAPI）
+│   ├── design-doc.md             # 设计 / 架构文档编写指南
+│   ├── adr.md                    # ADR（架构决策记录）编写指南
+│   ├── security.md               # SECURITY.md 编写指南
+│   ├── deployment.md             # 部署 / 运维文档编写指南
+│   ├── faq.md                    # FAQ / 故障排查编写指南
+│   ├── governance.md             # 治理小文档（Issue/PR 模板、行为准则）编写指南
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
 │   └── general-principles.md     # 通用写作原则
 ├── examples/
 │   └── trigger-examples.md
 └── assets/
 ```
+
+## 文档
+
+- [项目进度 PROGRESS.md](PROGRESS.md) — 分阶段的开发进度与计划
+- [架构设计 docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — L1/L2/L3 三层加载与路由机制
+- [架构决策记录 docs/adr/](docs/adr/) — 关键技术决策的始末
+- [常见问题 docs/FAQ.md](docs/FAQ.md) — 使用与贡献的高频疑问
+- [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) · [变更日志 CHANGELOG.md](CHANGELOG.md)
+
+## 维护与联系
+
+由 [@F-86](https://github.com/F-86) 维护。
+
+- **使用问题 / Bug / 功能建议**:提 [Issue](https://github.com/F-86/scribe/issues)（见仓库内 Issue 模板）
+- **贡献代码**:见 [CONTRIBUTING.md](CONTRIBUTING.md)
+- **安全问题**:请勿走公开 issue，见 [SECURITY.md](SECURITY.md)（邮件 19909233758@163.com）
 
 ## 许可证
 

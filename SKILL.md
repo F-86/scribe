@@ -40,6 +40,12 @@ license: MIT
 | `CHANGELOG` | "变更日志"、"更新记录"、"release notes" |
 | `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" |
 | API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" |
+| 设计/架构文档 | "设计文档"、"架构文档"、"系统设计"、"技术方案"、"RFC"、"提案" |
+| ADR | "架构决策记录"、"adr"、"决策记录"、"技术选型记录" |
+| `SECURITY.md` | "安全策略"、"漏洞上报"、"security.md"、"安全披露" |
+| 部署/运维文档 | "部署文档"、"运维文档"、"上线步骤"、"配置说明"、"deployment" |
+| FAQ / 故障排查 | "faq"、"常见问题"、"故障排查"、"troubleshooting"、"排错指南" |
+| 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" |
 
 若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
@@ -84,6 +90,12 @@ license: MIT
 | `CHANGELOG` | `references/changelog.md` |
 | `PROGRESS.md` / `ROADMAP.md` / `TODO.md` | `references/progress.md` |
 | API 文档（REST / SDK / OpenAPI） | `references/api-doc.md` |
+| 设计 / 架构文档 / RFC | `references/design-doc.md` |
+| ADR（架构决策记录） | `references/adr.md` |
+| `SECURITY.md` | `references/security.md` |
+| 部署 / 运维文档 | `references/deployment.md` |
+| FAQ / 故障排查 | `references/faq.md` |
+| 治理小文档（Issue/PR 模板、CODE_OF_CONDUCT） | `references/governance.md` |
 | **修改现有文档** | `references/modify-doc.md` |
 | **文档选型 / 职责边界不清** | `references/doc-map.md` |
 | 其他未覆盖的文档类型 | `references/general-principles.md` |
@@ -152,7 +164,6 @@ license: MIT
 - 代码实现 / 写业务逻辑 → 直接写代码，不需要此 Skill
 - 从代码注释**全量自动生成** API 文档 → 使用 TypeDoc / Sphinx / JSDoc 等工具（手写 REST 接口文档 / SDK 参考 / OpenAPI 规范由本 Skill 覆盖，见 `references/api-doc.md`）
 - 长篇技术博客或教程 → 此 Skill 面向项目文档，非内容创作
-- 设计文档 / RFC（架构决策记录） → 使用其他工具或自行撰写，此处不覆盖
 
 ## 特殊情况
 

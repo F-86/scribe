@@ -3,6 +3,35 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
 版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [Unreleased]
+
+### Changed
+- 规范化审查:AGENTS.md 文档类型清单补全至 13 类;AGENTS.md「同步清单」去重,改为指向 CONTRIBUTING.md 单一信息源
+- CONTRIBUTING.md 项目结构树补全 `docs/`、`.github/`、PROGRESS/SECURITY 等;「5 处同步」更正为「同步清单」(实为多处,含 trigger-examples 与 doc-map 边界)
+- README 新增「文档」导航节,指向 PROGRESS、ARCHITECTURE、ADR、FAQ 等
+- CONTRIBUTING 引用路径检查脚本覆盖范围扩展到 `docs/`
+
+## [0.7.0] - 2026-06-18
+
+### Added
+- 新增 **6 类文档**撰写能力,达成开发全周期覆盖:
+  - 设计 / 架构文档(`references/design-doc.md`,含现状架构文档与 RFC 两种形态)
+  - ADR 架构决策记录(`references/adr.md`,MADR 精简模板,一决策一文件、不可变)
+  - SECURITY.md(`references/security.md`,私密上报渠道 + 响应流程 + 支持版本)
+  - 部署 / 运维文档(`references/deployment.md`,环境/配置项/上线/回滚/排障)
+  - FAQ / 故障排查(`references/faq.md`,FAQ 问答制 + 排障"症状→原因→解决"制)
+  - 治理小文档(`references/governance.md`,Issue/PR 模板、CODE_OF_CONDUCT)
+- `trigger-examples.md` 新增上述 6 类的触发示例
+- 为 scribe 自身补齐适用文档:`docs/ARCHITECTURE.md`(三层架构)、`docs/adr/0001-0003`(三条关键决策)、`docs/FAQ.md`、`SECURITY.md`、`.github/` Issue/PR 模板
+
+### Changed
+- SKILL.md 文档类型识别表、L3 加载表接入上述 6 类
+- **移除 SKILL.md「不适用场景」中"设计文档 / RFC / ADR 不覆盖"的声明**——这些现已由本 skill 覆盖
+- `modify-doc.md` 类型识别表、README 支持类型表与项目结构树同步接入 6 类
+- README 新增「维护与联系」小节(维护者、Issue、安全上报入口);`references/readme.md` 规范同步补入「维护与联系」章节与取舍建议
+- 填写 SECURITY.md 安全联系邮箱
+- 新增**图表规范**(`general-principles.md`):除目录结构用 ASCII 树外,所有图(流程/架构/时序/ER 等)一律用 mermaid;`design-doc.md` 同步强化,`docs/ARCHITECTURE.md` 的流程图改为 mermaid
+
 ## [0.6.0] - 2026-06-18
 
 ### Added

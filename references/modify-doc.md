@@ -30,6 +30,12 @@
 | `CHANGELOG` | 文件名通常是 `CHANGELOG.md` |
 | `PROGRESS.md` | 文件名通常是 `PROGRESS.md`、`ROADMAP.md`、`TODO.md` |
 | API 文档 | 文件名通常是 `API.md`、`openapi.yaml`/`.json`、`swagger.*`，或 `docs/` 下的接口文档 |
+| 设计 / 架构文档 | 文件名通常是 `DESIGN.md`、`ARCHITECTURE.md`、`RFC-*.md`，或 `docs/` 下的设计文档 |
+| ADR | 文件名通常是 `docs/adr/NNNN-*.md`，带递增编号 |
+| `SECURITY.md` | 文件名通常是 `SECURITY.md`，位于根目录或 `.github/` |
+| 部署 / 运维文档 | 文件名通常是 `DEPLOY.md`、`DEPLOYMENT.md`、`docs/ops.md` |
+| FAQ / 故障排查 | 文件名通常是 `FAQ.md`、`TROUBLESHOOTING.md` |
+| 治理小文档 | 文件名通常在 `.github/`（Issue/PR 模板）或 `CODE_OF_CONDUCT.md` |
 
 若无法确定类型，向用户确认。
 

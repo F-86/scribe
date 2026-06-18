@@ -33,8 +33,11 @@ ln -s "$(pwd)" ~/.claude/skills/scribe
 
 ```
 SKILL.md                  — L1 + L2，skill 入口与主流程
-references/                — L3 按需加载的分类指南（每种文档类型一个）
+references/                — L3 按需加载的分类指南（每种文档类型一个 + doc-map 职责总览）
 examples/                  — 触发示例，仅供调试
+docs/                      — scribe 自身的架构文档、ADR、FAQ
+.github/                   — Issue / PR 模板
+README.md / CHANGELOG.md / PROGRESS.md / SECURITY.md — 项目自身的对外文档
 ```
 
 三层加载（L1/L2/L3）的设计：L1 是 frontmatter（触发判断），L2 是 SKILL.md 正文（主流程），L3 是 `references/*.md`（用到哪类文档才加载哪个）。改动时注意内容放对层级。
@@ -45,15 +48,17 @@ examples/                  — 触发示例，仅供调试
 
 直接修改 `references/<type>.md`。保持该文件的统一结构：**定位 → 结构模板 → 编写原则（DO/DON'T）→ 章节取舍 → 示例**。
 
-### 新增一种文档类型（5 处同步）
+### 新增一种文档类型（同步清单）
 
-这是最容易出错的贡献——新增一个文档类型必须同步改 **5 处**，缺一处都会导致流程断裂：
+这是最容易出错的贡献——新增一个文档类型必须同步改动多处，缺一处都会导致流程断裂：
 
 1. 新建 `references/<type>.md`（L3 指南本体，套用 `references/readme.md` 的结构）
 2. `SKILL.md` 第 2 步「文档类型识别表」加一行
 3. `SKILL.md` 第 4 步「L3 加载表」加一行
 4. `references/modify-doc.md` 步骤 A 的类型识别表加一行
-5. `README.md` 支持类型表 + 项目结构树，`examples/trigger-examples.md` 触发示例
+5. `README.md` 支持类型表 + 项目结构树各加一行
+6. `examples/trigger-examples.md` 加触发示例
+7. `references/doc-map.md` 补该类型与相邻文档的边界（若有易混淆的邻居）
 
 ## 提交前验证
 
@@ -67,7 +72,7 @@ scribe 没有自动化测试，用以下方式自检（建议全部跑一遍）�
 grep -rn "api-doc\|API 文档" SKILL.md references/modify-doc.md README.md examples/trigger-examples.md
 ```
 
-逐项核对上面「5 处同步」清单，确认无遗漏。
+逐项核对上面「同步清单」，确认无遗漏。
 
 ### 2. 引用路径检查
 
@@ -76,6 +81,14 @@ grep -rn "api-doc\|API 文档" SKILL.md references/modify-doc.md README.md examp
 ```bash
 grep -rhoE "references/[a-z-]+\.md" SKILL.md README.md | sort -u | while read f; do
   [ -e "$f" ] && echo "OK  $f" || echo "缺失 $f"
+done
+```
+
+`docs/` 内文档之间也有交叉链接（如 ARCHITECTURE → ADR），一并校验：
+
+```bash
+grep -rhoE "adr/[0-9]{4}-[a-z-]+\.md" docs/ | sort -u | while read f; do
+  [ -e "docs/$f" ] && echo "OK  docs/$f" || echo "缺失 docs/$f"
 done
 ```
 
@@ -118,7 +131,7 @@ docs: 补充 README 安装说明
 2. 创建功能分支（`feat/xxx` 或 `fix/xxx`）
 3. 完成改动，跑一遍上方「提交前验证」
 4. 更新 `CHANGELOG.md`
-5. 提交 PR，说明**改了什么**和**为什么改**；新增文档类型时在描述里勾选「5 处同步」清单
+5. 提交 PR，说明**改了什么**和**为什么改**；新增文档类型时在描述里勾选「同步清单」
 6. 等待 review
 
 PR 标题遵循 Conventional Commits 格式。
@@ -132,12 +145,14 @@ PR 标题遵循 Conventional Commits 格式。
 ### 为什么改
 此前 API 文档被列在「不适用场景」，但手写接口文档是高频需求，应由 skill 覆盖。
 
-### 5 处同步
+### 同步清单
 - [x] 新建 references/api-doc.md
 - [x] SKILL.md 文档类型识别表
 - [x] SKILL.md L3 加载表
 - [x] references/modify-doc.md 类型识别表
-- [x] README 类型表 + 结构树、trigger-examples 触发示例
+- [x] README 类型表 + 结构树
+- [x] trigger-examples 触发示例
+- [x] doc-map.md 边界（与 README/SDK 文档区分）
 ```
 
 ## Issue 规范
