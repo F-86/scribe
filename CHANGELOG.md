@@ -12,6 +12,7 @@
 - 为 scribe 自身新增 `docs/COMMIT_CONVENTION.md`,CONTRIBUTING「提交规范」节改为指向它(单一信息源),README「文档」节加入口
 
 ### Changed
+- 端到端场景实测发现并修复两处:(1) 识别表中"提交规范"信号同时命中 `CONTRIBUTING.md` 与`提交信息规范`两类造成歧义——CONTRIBUTING 信号改为"怎么参与贡献/PR 流程",全表信号词去重;(2) `project-setup.md` 步骤5 补充多文档「生成顺序」(README/AGENTS 等背景类在前、专项文档在后、导航链接最后回填),避免先生成的文档引用到还不存在的文件
 - 为 5 个早期文档规范(readme/api-doc/changelog/contributing/agent-instructions)的定位段补充与 `doc-map.md` 的边界链接——这些文件写于 doc-map 诞生前,是唯一缺"边界单一信息源"指引的;补齐后 13 类文档规范全部统一(其中 contributing 明确"提交规范只链接不重复展开",呼应 commit-message 的单一信息源)
 - 新增「多能力 Skill 的 L2 膨胀」设计规则:在 `skill-spec.md` L2 规范中明确「能力细节放 L3、索引表可留 L2 但超约 20 行须降级为 L3 索引」「L2 长度应随流程步骤增长而非能力数量增长」;同步在 `docs/ARCHITECTURE.md` 已知限制记录第 2 步类型索引表的阈值线(>20 类或 >25 行则降级);顺手修正 ARCHITECTURE 中"5 处同步/两张表"等过时表述
 - 更新 L1 description(触发判断的唯一依据):补全项目初始化/补齐、API/设计文档/ADR/项目进度/提交规范等能力关键词——此前 description 停留在早期版本,新增能力无匹配词可能导致 skill 不触发(召回率问题)

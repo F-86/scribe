@@ -40,7 +40,7 @@ license: MIT
 | `CLAUDE.md` / `AGENTS.md` | "claude 规则"、"项目指令"、"agent 上下文"、"agents.md"、"codex 规则"、"agent 指令文件" | `agent-instructions.md` |
 | `SKILL.md` | "skill"、"技能文件"、"agent skill"、"slash command" | `skill-spec.md`（agent 变体见下方 agent 表追加） |
 | `README` | "项目说明"、"readme"、"介绍文档" | `readme.md` |
-| `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"提交规范" | `contributing.md` |
+| `CONTRIBUTING.md` | "贡献指南"、"开发规范"、"怎么参与贡献"、"PR 流程" | `contributing.md` |
 | `CHANGELOG` | "变更日志"、"更新记录"、"release notes" | `changelog.md` |
 | `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" | `progress.md` |
 | API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" | `api-doc.md` |
