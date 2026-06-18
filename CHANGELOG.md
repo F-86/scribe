@@ -15,6 +15,8 @@
 - 「不适用场景」调整 API 文档边界：手写接口文档/SDK 参考/OpenAPI 由本 skill 覆盖，仅「从注释全量自动生成」交给 TypeDoc/Sphinx/JSDoc
 - SKILL.md 文档类型表、L3 加载表，`modify-doc.md` 类型识别表，README 支持类型表/项目结构同步接入 API 文档
 - `agent-instructions.md`：目录结构从「建议放」降级为「默认不放」（agent 会自己扫目录，目录说明属于 README 职责），同步删除结构模板与示例中的目录段落
+- `contributing.md`：PR 流程与 Issue 规范两节各补一个填好的示例，让生成的贡献指南更具体可仿照
+- 新增项目自身的 `CONTRIBUTING.md`（针对纯文档 skill 裁剪，含「5 处同步」清单与四层验证方式）
 
 ## [0.4.0] - 2026-06-16
 
