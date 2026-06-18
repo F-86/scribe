@@ -60,7 +60,7 @@ license: MIT
 
 | 目标 agent | 加载文件 |
 |-----------|---------|
-| 不确定 / 多 agent | 仅 `skill-spec.md`（通用规范） |
+| 不确定 / 多 agent | `skill-spec.md`（通用规范）；多 agent 兼容可加 `skill-agents.md`（差异对照） |
 | pi | `skill-spec.md` + `skill-pi.md` |
 | Claude Code | `skill-spec.md` + `skill-claude.md` |
 
@@ -192,16 +192,6 @@ license: MIT
 
 ### 多个文档需要写/改
 按优先级逐个处理。先完成一个，再开始下一个。不要一次生成多份文档。
-
-### 需要参考 Skill 设计规范
-若用户要求撰写的 SKILL.md 需要严格遵循规范，根据用户使用的 agent 加载对应文件：
-
-| 用户确认的 agent | 加载文件 |
-|----------------|---------|
-| 不确定 | `references/skill-spec.md`（只使用通用规范） |
-| pi | `references/skill-spec.md` + `references/skill-pi.md` |
-| Claude Code | `references/skill-spec.md` + `references/skill-claude.md` |
-| 多 agent 兼容 | `references/skill-spec.md` + `references/skill-agents.md` |
 
 ### 项目目录需要扫描
 若用户未提供项目背景但要求写**单份**文档，先让用户描述项目，或建议用户提供关键文件路径供你阅读。不要盲目递归遍历大代码库。

@@ -12,6 +12,7 @@
 - 为 scribe 自身新增 `docs/COMMIT_CONVENTION.md`,CONTRIBUTING「提交规范」节改为指向它(单一信息源),README「文档」节加入口
 
 ### Changed
+- 精简 SKILL.md(209→199 行):删除「特殊情况 / 需要参考 Skill 设计规范」中与第 2 步重复的 agent 加载表,将其独有的「多 agent→skill-agents.md」信息合并进第 2 步,消除 L2 内的三表冗余
 - 删除孤儿文件 `references/skill-md.md`:零路由引用,内容已被 `skill-spec.md` 完整覆盖,且其 frontmatter 示例含 `compatibility`/`metadata` 等已废弃字段(违反 ADR-0002);同步移除 README 结构树引用
 - 规范化审查:AGENTS.md 文档类型清单补全至 13 类;AGENTS.md「同步清单」去重,改为指向 CONTRIBUTING.md 单一信息源
 - CONTRIBUTING.md 项目结构树补全 `docs/`、`.github/`、PROGRESS/SECURITY 等;「5 处同步」更正为「同步清单」(实为多处,含 trigger-examples 与 doc-map 边界)
