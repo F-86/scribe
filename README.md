@@ -74,6 +74,14 @@ review 一下这个 SKILL.md，看看哪里不对
 重构一下 README，结构太长了
 ```
 
+**项目级编排（一次处理多份文档）**：
+```
+我新建了个项目，帮我定一套基础文档和规范
+初始化项目文档
+看看我这个项目缺哪些文档，需要补的告诉我
+```
+> 会先判断项目类型、扫描现状，列出建议补齐的清单交你确认，再逐个生成——不会自作主张全建。
+
 ### 支持的文档类型
 
 | 文档 | 说明 |
@@ -123,6 +131,7 @@ scribe/
 │   ├── governance.md             # 治理小文档（Issue/PR 模板、行为准则）编写指南
 │   ├── commit-message.md         # 提交信息规范（Conventional Commits）编写指南
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
+│   ├── project-setup.md          # 项目级编排（初始化/补齐多文档）指南
 │   └── general-principles.md     # 通用写作原则
 ├── examples/
 │   └── trigger-examples.md

@@ -6,6 +6,8 @@
 ## [Unreleased]
 
 ### Added
+- 新增 **项目级文档编排**能力(`references/project-setup.md`):支持「项目初始化」与「文档补齐」两个场景,共用统一流程(定项目类型 → 扫描根目录现状 → 算推荐集与缺口 → 列清单交用户确认 → 逐个生成);推荐集采用「通用基础集 + 类型附加项」模型;**不自作主张全建,由用户勾选**
+- SKILL.md 工作模式从「新建 / 修改」两种扩展为三种,新增「项目级编排」;新增对应流程 section
 - 新增 **提交信息规范**撰写能力(`references/commit-message.md`,Conventional Commits 格式、类型表、好/坏示例、与 CHANGELOG 的边界),并接入完整同步清单(SKILL.md×2、modify-doc.md、README×2、trigger-examples、doc-map 边界)
 - 为 scribe 自身新增 `docs/COMMIT_CONVENTION.md`,CONTRIBUTING「提交规范」节改为指向它(单一信息源),README「文档」节加入口
 
