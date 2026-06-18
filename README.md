@@ -91,6 +91,7 @@ review 一下这个 SKILL.md，看看哪里不对
 | 部署 / 运维文档 | 环境、配置项、上线步骤、回滚、排障 |
 | FAQ / 故障排查 | 常见问题问答、报错排查指南 |
 | 治理小文档 | Issue/PR 模板、CODE_OF_CONDUCT |
+| 提交信息规范 | Commit Message 格式（Conventional Commits） |
 
 > 各类文档分别管什么、边界在哪，见 [文档职责总览](references/doc-map.md)。
 
@@ -120,6 +121,7 @@ scribe/
 │   ├── deployment.md             # 部署 / 运维文档编写指南
 │   ├── faq.md                    # FAQ / 故障排查编写指南
 │   ├── governance.md             # 治理小文档（Issue/PR 模板、行为准则）编写指南
+│   ├── commit-message.md         # 提交信息规范（Conventional Commits）编写指南
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
 │   └── general-principles.md     # 通用写作原则
 ├── examples/
@@ -133,7 +135,7 @@ scribe/
 - [架构设计 docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — L1/L2/L3 三层加载与路由机制
 - [架构决策记录 docs/adr/](docs/adr/) — 关键技术决策的始末
 - [常见问题 docs/FAQ.md](docs/FAQ.md) — 使用与贡献的高频疑问
-- [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) · [变更日志 CHANGELOG.md](CHANGELOG.md)
+- [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) · [提交规范 docs/COMMIT_CONVENTION.md](docs/COMMIT_CONVENTION.md) · [变更日志 CHANGELOG.md](CHANGELOG.md)
 
 ## 维护与联系
 

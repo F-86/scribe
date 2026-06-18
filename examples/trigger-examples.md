@@ -97,6 +97,13 @@
 用户：加一份行为准则 / CODE_OF_CONDUCT
 ```
 
+### 写提交信息规范
+```
+用户：给项目定一份 commit message 规范
+用户：写个 COMMIT_CONVENTION.md
+用户：我们想用 Conventional Commits，帮我整理提交规范
+```
+
 ## 不应该触发的场景
 
 ```

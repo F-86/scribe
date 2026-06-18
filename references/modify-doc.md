@@ -36,6 +36,7 @@
 | 部署 / 运维文档 | 文件名通常是 `DEPLOY.md`、`DEPLOYMENT.md`、`docs/ops.md` |
 | FAQ / 故障排查 | 文件名通常是 `FAQ.md`、`TROUBLESHOOTING.md` |
 | 治理小文档 | 文件名通常在 `.github/`（Issue/PR 模板）或 `CODE_OF_CONDUCT.md` |
+| 提交信息规范 | 文件名通常是 `COMMIT_CONVENTION.md`，或 CONTRIBUTING.md 的「提交规范」节 |
 
 若无法确定类型，向用户确认。
 

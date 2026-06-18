@@ -46,6 +46,7 @@ license: MIT
 | 部署/运维文档 | "部署文档"、"运维文档"、"上线步骤"、"配置说明"、"deployment" |
 | FAQ / 故障排查 | "faq"、"常见问题"、"故障排查"、"troubleshooting"、"排错指南" |
 | 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" |
+| 提交信息规范 | "提交规范"、"commit message"、"commit 规范"、"conventional commits"、"提交信息格式" |
 
 若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
@@ -96,6 +97,7 @@ license: MIT
 | 部署 / 运维文档 | `references/deployment.md` |
 | FAQ / 故障排查 | `references/faq.md` |
 | 治理小文档（Issue/PR 模板、CODE_OF_CONDUCT） | `references/governance.md` |
+| 提交信息规范（Commit Message / Conventional Commits） | `references/commit-message.md` |
 | **修改现有文档** | `references/modify-doc.md` |
 | **文档选型 / 职责边界不清** | `references/doc-map.md` |
 | 其他未覆盖的文档类型 | `references/general-principles.md` |

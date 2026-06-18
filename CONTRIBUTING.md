@@ -104,16 +104,14 @@ markdownlint '**/*.md'
 
 ## 提交规范
 
-使用 [Conventional Commits](https://www.conventionalcommits.org/)，**中文描述**：
+使用 [Conventional Commits](https://www.conventionalcommits.org/)，**中文描述**，涉及版本号变更时在描述末尾标注版本（如 `(v0.7.0)`）：
 
 ```
 feat: 新增 API 文档撰写能力 (v0.5.0)
 fix: 修复 L3 加载表的路径错误
-refactor: claude-md.md 重命名为 agent-instructions.md
-docs: 补充 README 安装说明
 ```
 
-涉及版本号变更时，在描述末尾标注版本（如 `(v0.5.0)`）。
+完整的类型说明、规则与示例见 [docs/COMMIT_CONVENTION.md](docs/COMMIT_CONVENTION.md)。
 
 ## 变更记录
 

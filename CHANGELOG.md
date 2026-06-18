@@ -5,6 +5,10 @@
 
 ## [Unreleased]
 
+### Added
+- 新增 **提交信息规范**撰写能力(`references/commit-message.md`,Conventional Commits 格式、类型表、好/坏示例、与 CHANGELOG 的边界),并接入完整同步清单(SKILL.md×2、modify-doc.md、README×2、trigger-examples、doc-map 边界)
+- 为 scribe 自身新增 `docs/COMMIT_CONVENTION.md`,CONTRIBUTING「提交规范」节改为指向它(单一信息源),README「文档」节加入口
+
 ### Changed
 - 规范化审查:AGENTS.md 文档类型清单补全至 13 类;AGENTS.md「同步清单」去重,改为指向 CONTRIBUTING.md 单一信息源
 - CONTRIBUTING.md 项目结构树补全 `docs/`、`.github/`、PROGRESS/SECURITY 等;「5 处同步」更正为「同步清单」(实为多处,含 trigger-examples 与 doc-map 边界)
