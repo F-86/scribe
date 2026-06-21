@@ -1,7 +1,7 @@
 # 项目进度
 
 > 项目目标:让 scribe 覆盖开发全周期的文档撰写需求,每类文档职责清晰、边界不重叠。
-> 当前阶段:阶段五(已完成,v0.9.0 发布) · 最后更新:2026-06-18
+> 当前阶段:阶段六(已完成,v0.10.0 发布) · 最后更新:2026-06-21
 
 ## 阶段一:基础文档能力 ✅ 已完成
 
@@ -55,3 +55,15 @@
 - [x] 取向定为**默认独立成文**,仅极小项目并入 CONTRIBUTING
 - [x] 接入全部同步点(SKILL.md、modify-doc、doc-map ×3、README ×2、AGENTS、trigger-examples、L1 关键词)
 - [x] 修复 doc-map 测试边界行重复;通过同步完整性与引用路径验证
+
+## 阶段六: Harness 框架重构 (v0.10.0) ✅ 已完成
+
+**目标**:以 Harness 6 概念重构 SKILL.md 核心流程，提升执行确定性、质检质量和跨阶段决策一致性。
+
+- [x] 新增 `references/harness.md`：定义 6 个设计维度和本 Skill 的对应实现
+- [x] 新增 `references/review-checklist.md`：Plan / Draft / Final 三阶段质检清单
+- [x] 核心流程重构：6 Phase 线性管道 + 3 个 Checkpoint 检查点
+- [x] 文件系统状态管理：`.scribe/plan.md`、`.scribe/draft.md`、`.scribe/review.md`
+- [x] 渐进加载策略：每阶段指明必读 vs 按需查
+- [x] 显式边界段：先判断是否进 Skill 再执行
+- [x] 最小切片修复原则：禁止整篇重写

@@ -5,6 +5,21 @@
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-06-21
+
+### Added
+- 新增 **Harness 6 概念设计框架**：参考资料 `references/harness.md`，定义 SKILL.md 的六个核心设计维度（上下文管理、工具系统、执行编排、状态与记忆、评估与观测、约束与恢复）
+- 新增 **分层质检体系** `references/review-checklist.md`：Plan / Draft / Final 三阶段检查清单，区分内联自查（简单文档）与 SubAgent 评审（复杂文档）两种质检方式
+
+### Changed
+- **核心流程重构为 6 Phase 线性管道**：Intake → Context → Plan → Draft → Review → Revise → Deliver，替代原有的三段跳转式流程
+- **引入 3 个 Checkpoint 检查点**：Phase 2→3（确认计划）、Phase 4→5（确认初稿/评审结论）、Phase 5→6（确认交付）；每个 Checkpoint 必须停，Agent 只能推荐不能替用户选
+- **引入文件系统状态管理**：`.scribe/plan.md`（写作计划）、`.scribe/draft.md`（当前草稿）、`.scribe/review.md`（评审记录），决策不依赖聊天上下文
+- **渐进加载策略**：各阶段文件读取指南，Intake 只看识别表，Plan 才加载 L3 模板，Review 才读质检清单
+- **新增显式边界段**：SKILL.md 开头先判断是否应该进入此 Skill，再执行流程
+- **修复最小化原则**：Phase 5 Revise 要求最小切片修复，禁止整篇无脑重写
+- 修改模式 Phase 2 基于现有文档诊断而非从零规划
+
 ## [0.9.0] - 2026-06-18
 
 ### Added
