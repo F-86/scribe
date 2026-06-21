@@ -1,7 +1,7 @@
 ---
 name: scribe
 description: >-
-  AI agent 文档编写专家：撰写、修改、规范、重构各类开发者文档，也可为项目一次性初始化整套文档或检查补齐缺失文档。
+  AI agent 文档编写专家：撰写、修改、规范、重构、补齐各类开发者文档。
   关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、ADR、提交规范、测试文档、测试用例
 license: MIT
 ---
@@ -54,7 +54,6 @@ license: MIT
 | 治理小文档 | "issue 模板"、"pr 模板"、"行为准则"、"code of conduct"、".github 模板" | `governance.md` |
 | 提交信息规范 | "提交规范"、"commit message"、"commit 规范"、"conventional commits"、"提交信息格式" | `commit-message.md` |
 | 测试文档 | "测试用例"、"测试文档"、"测试计划"、"测试策略"、"test case"、"怎么写测试"、"测试规范" | `test-doc.md` |
-| 测试文档 | "测试用例"、"测试文档"、"测试计划"、"测试策略"、"test case"、"怎么写测试"、"测试规范" | `test-doc.md` |
 
 若无法确定类型，或用户在两类文档之间犹豫（该写 README 还是设计文档？记进 CHANGELOG 还是 PROGRESS？），加载 `references/doc-map.md`（文档职责总览）辅助选型，再向用户确认。
 
@@ -76,20 +75,14 @@ license: MIT
 
 - **项目背景**：项目名称、用途、技术栈
 - **目标受众**：写给谁看（其他开发者？AI agent？新成员？）
-- **已有素材**：是否有现有文档、代码注释、设计文档可参考；**若文档要封装/描述项目里已有的功能（如"写个统计数据库的 skill"），还要定位实现该功能的源代码**
+- **项目背景**：项目名称、用途、技术栈
+- **目标受众**：写给谁看（其他开发者？AI agent？新成员？）
+- **已有素材**：是否有现有文档、代码注释、设计文档可参考；若文档要封装项目已有能力，参照 `references/new-doc-capability-check.md`
 - **特殊要求**：格式偏好、长度限制、必须包含的章节
 
 提问要具体，避免开放式「还有什么需要补充的吗？」。例如：
 
 > 这个项目是用什么语言/框架写的？目标受众是谁（新手还是熟手）？有没有现有文档可以参照？
-
-**当文档要封装项目现有能力时**（典型：写 SKILL.md / API 文档 / CLAUDE.md，需要写清"调用哪个脚本/函数/接口"）：用户常常不会主动说明项目里是否已有相关实现。**先问一句，让用户决定，不要擅自扫描或擅自臆造**：
-
-> 这个功能（如统计 MySQL/Redis）项目里已经有实现代码了吗？如果有，告诉我在哪几个文件（或让我去看），我据此写出可执行的调用流程；如果没有，我直接为你写出实现脚本 + 配套文档。
-
-- **用户说"有"** → 让其提供路径或按功能关键词**定向**定位那几个文件，读懂真实调用方式后再写。**不要在没看过实现的情况下凭空写"调用相应脚本"这类无法执行的占位流程**（违反「可执行 > 抽象」与「不虚构」）。
-- **用户说"没有"** → 不扫描项目，直接编写实现脚本与配套文档。
-- **用户不确定** → 按"没有"处理，或按功能关键词快速定向查找确认，不全库遍历。
 
 ### 4. 加载 L3 参考资料
 
@@ -101,6 +94,7 @@ license: MIT
 | **项目级编排（初始化 / 补齐多文档）** | `references/project-setup.md` |
 | **文档选型 / 职责边界不清** | `references/doc-map.md` |
 | 其他未覆盖的文档类型 | `references/general-principles.md` |
+| **新建文档时封装项目已有能力** | `references/new-doc-capability-check.md` |
 
 ### 5. 生成文档
 
@@ -193,5 +187,31 @@ license: MIT
 若用户未提供项目背景但要求写**单份**文档，先让用户描述项目，或建议用户提供关键文件路径供你阅读。不要盲目递归遍历大代码库。
 
 > 例外：**项目级编排流程**会扫描项目根目录的顶层文档（看缺哪些 README/AGENTS.md 等），这是轻量、有界的检查，属于该流程的正常步骤，不在此限。
->
-> 例外：**文档要封装项目现有能力时**（如写 SKILL.md/API 文档描述已有功能），**先问用户项目里是否已有实现**（见第 3 步）：用户确认"有"才去**定向**定位那几个文件（按路径或功能关键词，非全库遍历）；用户说"没有"则不扫描，直接编写实现与文档。
+
+## references/ 目录索引
+
+| 文件 | 用途 |
+|------|------|
+| `references/agent-instructions.md` | CLAUDE.md / AGENTS.md 规范 |
+| `references/skill-spec.md` | SKILL.md 通用规范 |
+| `references/readme.md` | README 规范 |
+| `references/contributing.md` | 贡献指南规范 |
+| `references/changelog.md` | CHANGELOG 规范 |
+| `references/progress.md` | PROGRESS.md 进度文档规范 |
+| `references/api-doc.md` | API 文档规范 |
+| `references/design-doc.md` | 设计/架构文档规范 |
+| `references/adr.md` | ADR 架构决策记录规范 |
+| `references/security.md` | SECURITY.md 规范 |
+| `references/deployment.md` | 部署/运维文档规范 |
+| `references/faq.md` | FAQ / 故障排查文档规范 |
+| `references/governance.md` | 治理小文档规范（Issue/PR 模板、行为准则等） |
+| `references/commit-message.md` | 提交信息规范 |
+| `references/test-doc.md` | 测试文档规范 |
+| `references/doc-map.md` | 文档类型选型/职责边界不清时参考 |
+| `references/modify-doc.md` | 修改现有文档的操作指南 |
+| `references/project-setup.md` | 项目级多文档编排流程 |
+| `references/general-principles.md` | 未覆盖文档类型通用原则 |
+| `references/skill-agents.md` | 多 agent 兼容差异对照 |
+| `references/skill-pi.md` | pi agent 特有规范 |
+| `references/skill-claude.md` | Claude Code 特有规范 |
+| `references/new-doc-capability-check.md` | 新建文档时封装项目已有能力的检查流程 |
