@@ -133,6 +133,8 @@ scribe/
 │   ├── commit-message.md         # 提交信息规范（Conventional Commits）编写指南
 │   ├── modify-doc.md             # 修改/规范/重构文档指南
 │   ├── project-setup.md          # 项目级编排（初始化/补齐多文档）指南
+│   ├── harness.md                # Harness 6 概念设计框架
+│   ├── review-checklist.md       # 分层质检清单（Plan/Draft/Final）
 │   └── general-principles.md     # 通用写作原则
 ├── examples/
 │   └── trigger-examples.md
@@ -144,6 +146,7 @@ scribe/
 - [项目进度 PROGRESS.md](PROGRESS.md) — 分阶段的开发进度与计划
 - [架构设计 docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — L1/L2/L3 三层加载与路由机制
 - [架构决策记录 docs/adr/](docs/adr/) — 关键技术决策的始末
+- [Harness 框架 references/harness.md](references/harness.md) — 6 概念设计哲学
 - [常见问题 docs/FAQ.md](docs/FAQ.md) — 使用与贡献的高频疑问
 - [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) · [提交规范 docs/COMMIT_CONVENTION.md](docs/COMMIT_CONVENTION.md) · [变更日志 CHANGELOG.md](CHANGELOG.md)
 
