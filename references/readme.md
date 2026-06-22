@@ -144,6 +144,13 @@ curl localhost:3000/health  # 健康检查
 ## 文档
 API 完整文档见 [docs/API.md](docs/API.md)
 
+## 禁止行为
+
+- **禁止**在 README 中列出安装步骤但没有说明依赖环境（如 Node 版本、数据库）
+- **禁止**使用"简单"、"易用"、"强大"等无客观标准的形容词
+- **禁止**在标题中使用全大写（如 "INTRODUCTION"、"INSTALLATION"）
+- **禁止**把架构设计、API 细节、变更日志塞进 README
+
 ## 许可证
 MIT
 ```

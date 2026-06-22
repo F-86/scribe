@@ -251,3 +251,10 @@ description: >-
 | 10-50万 | 事业部负责人 |
 | > 50万 | CEO + 财务部 |
 ```
+
+## 禁止行为
+
+- **禁止**在 `name` 或 `description` 中使用 agent 特有的字段名（如 `interpreter`、`slash_command`）除非确认目标 agent 支持
+- **禁止**在 L1 description 中描述实现细节——只写触发条件
+- **禁止**在 L2 中引用不存在的 references 文件
+- **禁止**生成空模板占位——每个章节要么写真实内容，要么标注 `<!-- TODO -->`
