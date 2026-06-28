@@ -5,6 +5,16 @@
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-06-28
+
+### Added
+- 新增 **Multi-file 设计笔记**（项目设计学习笔记）能力 `references/design-doc-multi-file.md`：作为 `design-doc.md` 的多文件变体，适用于大型项目（源码 ≥ 5000 行、主题 ≥ 5、需要按主题族分组管理）。包含编号方案（00/10-19/20-29/.../90-99）、单文档模板、根 README 模板、与 Harness 6 框架的集成要点
+- `references/design-doc.md` 新增"形态选择:单文件 vs Multi-file"章节，明确两种形态的适用边界与判断流程
+- SKILL.md 文档类型识别表新增 "Multi-file 设计笔记" 行，keywords 补全"多文件设计笔记、agent-design-study"等触发词
+
+### Notes
+- Multi-file 设计笔记与项目级编排（`project-setup.md`）正交：前者管"一个文档类型怎么拆"，后者管"项目该有哪几类文档"，可组合使用
+
 ## [0.10.0] - 2026-06-21
 
 ### Added

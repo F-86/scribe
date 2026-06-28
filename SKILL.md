@@ -2,7 +2,7 @@
 name: scribe
 description: >-
   AI agent 文档编写专家：撰写、修改、规范、重构、补齐各类开发者文档。
-  关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、ADR、提交规范、测试文档、测试用例
+  关键词：写文档、改文档、规范文档、初始化项目文档、补齐文档、缺哪些文档、CLAUDE.md、AGENTS.md、SKILL.md、README、贡献指南、变更日志、项目进度、API 文档、设计文档、多文件设计笔记、agent-design-study、ADR、提交规范、测试文档、测试用例
 license: MIT
 ---
 
@@ -135,6 +135,7 @@ Phase 6  Deliver           最终确认 → 写入目标路径
 | `PROGRESS.md` | "项目进度"、"进度文档"、"待办清单"、"roadmap"、"路线图"、"todo 列表"、"分阶段计划" | `progress.md` |
 | API 文档 | "接口文档"、"REST API"、"API 参考"、"OpenAPI"、"swagger"、"endpoint 文档" | `api-doc.md` |
 | 设计/架构文档 | "设计文档"、"架构文档"、"系统设计"、"技术方案"、"RFC"、"提案" | `design-doc.md` |
+| Multi-file 设计笔记 | "多文件设计笔记"、"项目设计笔记"、"agent-design-study"、"按主题分组的设计文档"、"源码 ≥ 5000 行出笔记" | `design-doc-multi-file.md` |
 | ADR | "架构决策记录"、"adr"、"决策记录"、"技术选型记录" | `adr.md` |
 | `SECURITY.md` | "安全策略"、"漏洞上报"、"security.md"、"安全披露" | `security.md` |
 | 部署/运维文档 | "部署文档"、"运维文档"、"上线步骤"、"配置说明"、"deployment" | `deployment.md` |
@@ -347,6 +348,7 @@ SubAgent 评审 prompt 模板：
 | `references/progress.md` | PROGRESS.md 进度文档规范 |
 | `references/api-doc.md` | API 文档规范 |
 | `references/design-doc.md` | 设计/架构文档规范 |
+| `references/design-doc-multi-file.md` | Multi-file 设计笔记（项目设计学习笔记）规范 |
 | `references/adr.md` | ADR 架构决策记录规范 |
 | `references/security.md` | SECURITY.md 规范 |
 | `references/deployment.md` | 部署/运维文档规范 |
